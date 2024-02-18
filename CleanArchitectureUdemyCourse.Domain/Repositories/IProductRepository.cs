@@ -1,0 +1,14 @@
+﻿using CleanArchitectureUdemyCourse.Domain.Entities;
+
+namespace CleanArchitectureUdemyCourse.Domain.Repositories
+{
+    public interface IProductRepository
+    {
+        Task<IEnumerable<Product>> GetProductsAsync();
+        Task<Product> GetProductByIdAsync(int id);
+        Task<Product> GetProductAndCategoryByIdAsync(int id);
+        Task<Product> CreateProductAsync(Product product);
+        Task<Product> UpdateProductAsync(Product product);
+        Task DeleteProductAsync(int id);
+    }
+}
